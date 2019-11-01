@@ -23,4 +23,18 @@ public class BinomialCoefficient {
             return 1;
         return pascalsMethod(n-1, k-1) + pascalsMethod(n-1, k);
     }
+
+    public static long dynamicMethod(int n, int k) {
+        if (k>n || k<0) // Invalid input case
+            return -1;
+
+        long[][] table = new long[n+1][k+1]; // n = row & k = columns
+        for (int row=0; row<n+1; row++)
+            for (int col=0; col<k+1; col++)
+                if (col == 0 || col == row || row == 0)
+                    table[row][col] = 1;
+                else
+                    table[row][col] = table[row-1][col-1] + table[row-1][col];
+        return table[n][k];
+    }
 }
