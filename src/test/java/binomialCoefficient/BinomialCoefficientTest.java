@@ -38,4 +38,18 @@ public class BinomialCoefficientTest {
         long actual = BinomialCoefficient.pascalsMethod(6, 12);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void dynamicTest50c5_2118760() {
+        long expected = 2118760;
+        long actual = BinomialCoefficient.dynamicMethod(50, 5);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void dynamicTest35c50_neg1() {
+        long expected = -1;
+        long actual = BinomialCoefficient.dynamicMethod(35, 50);
+        assertEquals(expected, actual);
+    }
 }
