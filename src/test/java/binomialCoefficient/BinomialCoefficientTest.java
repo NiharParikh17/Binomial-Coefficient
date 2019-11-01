@@ -24,4 +24,18 @@ public class BinomialCoefficientTest {
         long actual = BinomialCoefficient.definitionMethod(3, 10);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void pascalsTest12c6_924() {
+        long expected = 924;
+        long actual = BinomialCoefficient.pascalsMethod(12, 6);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void pascalsTest6c12_neg1() {
+        long expected = -1;
+        long actual = BinomialCoefficient.pascalsMethod(6, 12);
+        assertEquals(expected, actual);
+    }
 }
