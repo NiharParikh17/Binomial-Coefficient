@@ -1,8 +1,11 @@
 package binomialCoefficient;
 
 public class BinomialCoefficient {
-    public static long factorial (int n) {
-        if (n==1)
+    public static long factorial(int n) {
+        if (n<1) // Invalid input
+            return -1;
+
+        if (n==1) // Base Case
             return 1;
         return n*factorial(n-1);
     }
